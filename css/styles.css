@@ -8,17 +8,54 @@ body {
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
   color: #2e2f42;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  display: block;
+}
 /* #endregion */
 
 /* #region Common */
+
+.container {
+  max-width: 1158px;
+  margin: 0;
+  padding: 0 15px;
+}
 
 .logo-link {
   font-family: "Raleway", sans-serif;
@@ -35,9 +72,16 @@ a {
 /* #region Header */
 
 .header {
+  display: flex;
+  align-items: center;
 }
-
+.header a {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
 .nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo-link .logo-link-header {
@@ -45,6 +89,9 @@ a {
 }
 
 .nav-list {
+  display: flex;
+  gap: 40px;
+  margin-left: 76px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -52,6 +99,15 @@ a {
 }
 .nav-item {
 }
+
+/* .nav-item:not(:last-child) {
+  margin-right: 40px;
+} */
+
+/* .nav-item-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+} */
 
 .nav-item-link:hover,
 .nav-item-link:focus,
@@ -63,10 +119,13 @@ a {
 
 .adress {
   font-style: normal;
+  margin-left: auto;
 }
 .adress-list {
+  display: flex;
 }
-.adress-item {
+.adress-item:last-child {
+  margin-left: 40px;
 }
 
 .adress-link {
@@ -118,7 +177,12 @@ a {
 .advantages-title {
 }
 .advantages-list {
+  display: flex;
+  gap: 24px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
+
 .advantages-item {
 }
 .advantages-subtitle {
@@ -138,6 +202,7 @@ a {
   background-color: #f4f4fd;
 }
 .team-title {
+  padding-top: 120px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -147,6 +212,10 @@ a {
   text-transform: capitalize;
 }
 .team-list {
+  margin-top: 72px;
+  padding-bottom: 120px;
+  display: flex;
+  gap: 24px;
 }
 .team-item {
   background-color: #fff;
